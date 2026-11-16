@@ -1,0 +1,101 @@
+
+  You can now view your Streamlit app in your browser.
+
+  URL: http://127.0.0.1:8501
+
++------------------------- Traceback (most recent call last) --------------------------+
+| D:\Applations\Python\Python312\Lib\site-packages\streamlit\runtime\scriptrunner\exec |
+| _code.py:129 in exec_func_with_error_handling                                        |
+|                                                                                      |
+| D:\Applations\Python\Python312\Lib\site-packages\streamlit\runtime\scriptrunner\scri |
+| pt_runner.py:787 in code_to_exec                                                     |
+|                                                                                      |
+| D:\Applations\Python\Python312\Lib\site-packages\streamlit\runtime\scriptrunner\scri |
+| pt_runner.py:171 in _mpa_v1                                                          |
+|                                                                                      |
+| D:\Applations\Python\Python312\Lib\site-packages\streamlit\navigation\page.py:490 in |
+| run                                                                                  |
+|                                                                                      |
+| C:\Users\lenovo\Desktop\人工智能大赛\src\app\main.py:645 in <module>                 |
+|                                                                                      |
+|                                                                                      |
+| C:\Users\lenovo\Desktop\人工智能大赛\src\app\main.py:629 in main                     |
+|                                                                                      |
+|                                                                                      |
+| C:\Users\lenovo\Desktop\人工智能大赛\src\app\main.py:263 in render_monitor_dashboard |
+|                                                                                      |
+|   260             """                                                                |
+|   261             <div class="section-card">                                         |
+|   262                 <div class="insight"><strong>关键发现</strong>：不同输入变量对 |
+| > 263             </div>                                                             |
+|   264             """,                                                               |
+|   265             unsafe_allow_html=True,                                            |
+|   266         )                                                                      |
+|                                                                                      |
+| C:\Users\lenovo\Desktop\人工智能大赛\src\app\main.py:343 in                          |
+| render_realtime_simulation                                                           |
+|                                                                                      |
+|   340             with c1:                                                           |
+|   341                 safe_image(FIGURES_DIR / "itransformer_test_y1_curve.png", "iT |
+|   342             with c2:                                                           |
+| > 343                 safe_image(FIGURES_DIR / "itransformer_test_y2_curve.png", "iT |
+|   344         with tab2:                                                             |
+|   345             c1, c2 = st.columns(2, gap="large")                                |
+|   346             with c1:                                                           |
++--------------------------------------------------------------------------------------+
+TypeError: risk_figure() missing 2 required positional arguments: 'warn_quantile' and 
+'danger_quantile'
++------------------------- Traceback (most recent call last) --------------------------+
+| D:\Applations\Python\Python312\Lib\site-packages\streamlit\runtime\scriptrunner\exec |
+| _code.py:129 in exec_func_with_error_handling                                        |
+|                                                                                      |
+| D:\Applations\Python\Python312\Lib\site-packages\streamlit\runtime\scriptrunner\scri |
+| pt_runner.py:787 in code_to_exec                                                     |
+|                                                                                      |
+| D:\Applations\Python\Python312\Lib\site-packages\streamlit\runtime\scriptrunner\scri |
+| pt_runner.py:171 in _mpa_v1                                                          |
+|                                                                                      |
+| D:\Applations\Python\Python312\Lib\site-packages\streamlit\navigation\page.py:490 in |
+| run                                                                                  |
+|                                                                                      |
+| C:\Users\lenovo\Desktop\人工智能大赛\src\app\main.py:645 in <module>                 |
+|                                                                                      |
+|   642                                                                                |
+|   643                                                                                |
+|   644 if __name__ == "__main__":                                                     |
+| > 645     main()                                                                     |
+|   646                                                                                |
+|                                                                                      |
+| C:\Users\lenovo\Desktop\人工智能大赛\src\app\main.py:629 in main                     |
+|                                                                                      |
+|   626     decision_df = load_csv(TABLES_DIR / "decision_recommendations.csv")        |
+|   627                                                                                |
+|   628     render_sidebar(data_df, metrics_df, risk_summary_df)                       |
+| > 629     render_monitor_dashboard(data_df, metrics_df, risk_summary_df, risk_alert_ |
+|   630     st.divider()                                                               |
+|   631     render_lag_section(best_lag_df)                                            |
+|   632     st.divider()                                                               |
+|                                                                                      |
+| C:\Users\lenovo\Desktop\人工智能大赛\src\app\main.py:263 in render_monitor_dashboard |
+|                                                                                      |
+|   260             st.markdown("**SRU 数据样例**")                                    |
+|   261             st.dataframe(data_df.tail(5), width="stretch", hide_index=True)    |
+|   262                                                                                |
+| > 263     render_realtime_simulation(risk_alert_df, decision_df)                     |
+|   264                                                                                |
+|   265                                                                                |
+|   266 def render_realtime_simulation(risk_alert_df: pd.DataFrame, decision_df: pd.Da |
+|                                                                                      |
+| C:\Users\lenovo\Desktop\人工智能大赛\src\app\main.py:343 in                          |
+| render_realtime_simulation                                                           |
+|                                                                                      |
+|   340                                                                                |
+|   341     history_start = max(0, int(current_step) - 80)                             |
+|   342     history_end = min(max_step, int(current_step) + 40)                        |
+| > 343     realtime_fig = risk_figure(                                                |
+|   344         risk_alert_df,                                                         |
+|   345         target=target,                                                         |
+|   346         start=history_start,                                                   |
++--------------------------------------------------------------------------------------+
+TypeError: risk_figure() missing 2 required positional arguments: 'warn_quantile' and 
+'danger_quantile'

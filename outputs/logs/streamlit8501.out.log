@@ -1,0 +1,38 @@
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  URL: http://127.0.0.1:8501
+
++------------------------- Traceback (most recent call last) --------------------------+
+| D:\Applations\Python\Python312\Lib\site-packages\streamlit\runtime\scriptrunner\exec |
+| _code.py:129 in exec_func_with_error_handling                                        |
+|                                                                                      |
+| D:\Applations\Python\Python312\Lib\site-packages\streamlit\runtime\scriptrunner\scri |
+| pt_runner.py:787 in code_to_exec                                                     |
+|                                                                                      |
+| D:\Applations\Python\Python312\Lib\site-packages\streamlit\runtime\scriptrunner\scri |
+| pt_runner.py:171 in _mpa_v1                                                          |
+|                                                                                      |
+| D:\Applations\Python\Python312\Lib\site-packages\streamlit\navigation\page.py:490 in |
+| run                                                                                  |
+|                                                                                      |
+| C:\Users\lenovo\Desktop\人工智能大赛\src\app\main.py:999 in <module>                 |
+|                                                                                      |
+|                                                                                      |
+| C:\Users\lenovo\Desktop\人工智能大赛\src\app\main.py:989 in main                     |
+|                                                                                      |
+|                                                                                      |
+| C:\Users\lenovo\Desktop\人工智能大赛\src\app\main.py:603 in render_explanation_page  |
+|                                                                                      |
+|   600             <div class="section-card">                                         |
+|   601                 <p><strong>示例建议</strong></p>                               |
+|   602                 <p><strong>目标变量</strong>：{first['target']}，<strong>风险  |
+| > 603                 <p><strong>触发原因</strong>：{first['trigger_reason']}</p>    |
+|   604                 <p><strong>建议动作</strong>：{first['recommendation']}</p>    |
+|   605             </div>                                                             |
+|   606             """,                                                               |
++--------------------------------------------------------------------------------------+
+NameError: name 'SRUPredictor' is not defined

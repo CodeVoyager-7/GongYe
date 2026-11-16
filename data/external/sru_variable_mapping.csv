@@ -1,0 +1,8 @@
+csv_column,literature_symbol,confirmed_meaning_cn,confirmed_meaning_en,unit,confidence,main_evidence,source_url,notes
+a1,u1,MEA区气体流量,MEA gas flow,m3/hr,高,多篇SRU软测量文献将u1定义为MEA gas flow; 本数据a1与a2高度相关也符合MEA气量与配风联动,https://ieco.usb.ac.ir/article_8028_02da131feb3de193c57c509eced540b6.pdf,OpenML仅保留a1-a5匿名字段; 语义来自SRU benchmark文献
+a2,u2,第一空气流量 AIR MEA 1,First air flow / AIR MEA 1,m3/hr,高,多篇SRU软测量文献将u2定义为First air flow或AIR MEA 1; IFAC原始论文说明AIR MEA 1由操作员调节,https://skoge.folk.ntnu.no/prost/proceedings/ifac2002/data/content/01320/1320.pdf,与a1强相关符合MEA气量配风逻辑
+a3,u3,第二空气流量 AIR MEA 2,Second air flow / AIR MEA 2,m3/hr,高,多篇SRU软测量文献将u3定义为Second air flow; IFAC原始论文说明AIR MEA 2由自动反馈回路控制,https://skoge.folk.ntnu.no/prost/proceedings/ifac2002/data/content/01320/1320.pdf,当前lag分析中a3对y1较关键; 可解释为空气反馈调节影响尾气H2S
+a4,u4,SWS区气体流量,Gas flow in SWS zone,m3/hr,中,多篇后续建模文献将u4定义为Gas flow in SWS zone; 但个别2023文献表格把u4/u5顺序写反,https://eprints.soton.ac.uk/443130/1/TGRBF_JPC_re1.pdf,a4与a5高度相关; 建议答辩说明a4/a5为SWS气量与空气量这一对变量
+a5,u5,SWS区空气流量 AIR SWS,Air flow in SWS zone / AIR SWS,m3/hr,中,多篇后续建模文献将u5定义为Air flow in SWS zone; IFAC原始论文也列出AIR SWS与SWS GAS但图示顺序和部分后续表格存在差异,https://eprints.soton.ac.uk/443130/1/TGRBF_JPC_re1.pdf,a4/a5顺序需在答辩中标注为根据多数表格和相关性推定
+y1,y1,尾气H2S浓度,H2S concentration,-,高,SRU软测量文献明确y1为H2S concentration,https://ieco.usb.ac.ir/article_8028_02da131feb3de193c57c509eced540b6.pdf,本项目应将y1解释为H2S尾气质量指标
+y2,y2,尾气SO2浓度,SO2 concentration,-,高,SRU软测量文献明确y2为SO2 concentration,https://ieco.usb.ac.ir/article_8028_02da131feb3de193c57c509eced540b6.pdf,本项目应将y2解释为SO2尾气质量指标

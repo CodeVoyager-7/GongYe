@@ -1,0 +1,16 @@
+{
+  "y1": {
+    "value_warn_threshold": 0.10154465585947037,
+    "value_danger_threshold": 0.12088338285684586,
+    "error_warn_threshold": 0.03262915089726448,
+    "error_danger_threshold": 0.04448619857430458,
+    "source": "best_model_val_calibration"
+  },
+  "y2": {
+    "value_warn_threshold": 0.19733045995235443,
+    "value_danger_threshold": 0.21317335963249207,
+    "error_warn_threshold": 0.05128101035952568,
+    "error_danger_threshold": 0.06196824014186859,
+    "source": "best_model_val_calibration"
+  }
+}
